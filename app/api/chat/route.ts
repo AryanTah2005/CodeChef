@@ -30,7 +30,7 @@ export async function POST(req: Request) {
       stream: true,
       messages
     })
-    const specificEmail = "aryan.tah7@gmail.com"
+    const specificEmail = process.env.ADMIN_EMAIL;
     const hasSpecificEmail = user.emailAddresses.some(
       (emailObj) => emailObj.emailAddress === specificEmail
     )
